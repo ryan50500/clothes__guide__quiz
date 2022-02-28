@@ -8,19 +8,17 @@ function getResult(){
     let question6;
    
     
-    
     // for each question, depending on which answer is picked,  question1 will have a value of 1,2, or 3
      function questionOne(){
        if ( document.getElementById('tighter__side').checked === true) {
-         question1 = 1;
+         question1 = '1';
        }
        else if (document.getElementById('just__right').checked === true) {
-           question1 = 2
+           question1 = '2'
        }
-       else {
-          document.getElementById('result').style.backgroundColor = 'pink';
-           question1 = 3
-       }
+       else if (document.getElementById('keep__it__loose').checked === true) {
+          question1 = '3'
+      }
      }
      questionOne();
    
@@ -34,9 +32,9 @@ function getResult(){
        else if (document.getElementById('just__a__hint').checked === true) {
            question2 = '2'
        }
-       else {
-           question2 = '3'
-       }
+       else if (document.getElementById('keep__it__hidden').checked === true) {
+          question2 = '3'
+      }
      }
     questionTwo();
    
@@ -50,9 +48,9 @@ function getResult(){
        else if (document.getElementById('like__an__hourglass').checked === true) {
            question3 = '2'
        }
-       else {
-           question3 = '3'
-       }
+       else if (document.getElementById('hips__dont__lie').checked === true) {
+          question3 = '3'
+      }
      }
      questionThree();
    
@@ -67,9 +65,9 @@ function getResult(){
        else if (document.getElementById('as__it__comes').checked === true) {
            question4 = '2'
        }
-       else {
-           question4 = '3'
-       }
+       else if (document.getElementById('show__off').checked === true) {
+          question4 = '3'
+      }
      }
      questionFour();
  
@@ -83,9 +81,9 @@ function getResult(){
        else if (document.getElementById('true__blue').checked === true) {
            question5 = '2'
        }
-       else {
-           question5 = '3'
-       }
+       else if (document.getElementById('dark__as').checked === true) {
+          question5 = '3'
+      }
      }
      questionFive();
     
@@ -99,12 +97,13 @@ function getResult(){
        else if (document.getElementById('no__complaints').checked === true) {
            question6 = '2'
        }
-       else {
-           question6 = '3'
-       }
+       else if (document.getElementById('a__lift').checked === true) {
+          question6 = '3'
+      }
      }
      questionSix();
     
+     
  
  
  
@@ -135,4 +134,3 @@ function getResult(){
  
  
     }
- 
