@@ -1,0 +1,171 @@
+/* Box sizing rules */
+ 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ 
+
+/* Remove default margin */
+ 
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ 
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ 
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+ 
+
+/* Set core root defaults */
+ 
+html:focus-within {
+  scroll-behavior: smooth;
+}
+ 
+
+/* Set core body defaults */
+ 
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+ 
+
+/* A elements that don't have a class get default styles */
+ 
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+ 
+
+/* Make images easier to work with */
+ 
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+
+
+input[type="radio"], input[type="checkbox"] {
+  display: block;
+}
+ 
+
+.question.one {
+  display: block;
+}
+.question.two {
+  display: block;
+}
+.question.three {
+  display: block;
+}
+.question.four {
+  display: block;
+}
+.question.five {
+  display: block;
+}
+.question.six {
+  display: block;
+}
+ 
+
+#result {
+  padding-top: 20%;
+  background-size: cover;
+}
+
+
+
+input[type='radio']+label:not(.label-like):before {
+  display: none;
+}
+ 
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+ 
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+ 
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #eee;
+}
+ 
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+ 
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #000000;
+}
+ 
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+ 
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+ 
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 10px;
+  top: 5px;
+  width: 9px;
+  height: 16px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+ 
