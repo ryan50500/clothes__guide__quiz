@@ -67,10 +67,6 @@ picture {
 input[type="radio"], input[type="checkbox"] {
   display: block;
 }
- 
-.border {
-    border: 2px solid black;
-}
 
 
 .question.one {

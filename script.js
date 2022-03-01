@@ -1,21 +1,5 @@
 
 
-// const checkboxContainers = document.getElementsByClassName('container');
-
-// for (let i=0; i < checkboxContainers.length; i++) {
-//     checkboxContainers[i].addEventListener('click', function(){
-//         checkboxContainers[i].querySelector('.image').style.border = 'none';
-//         // check if the checkbox selected has an image first, if so add the border
-//         if (this.querySelector('.image')) {
-//             this.querySelector('.image').style.border = '2px solid black';
-//         }
-//         else {
-//             return;
-//         }
-//     });
-// }
-
-
 const checkboxContainers = document.getElementsByClassName('container');
 const checkboxWithImage = document.querySelectorAll('.container .image');
 
@@ -205,13 +189,21 @@ function getResult(){
         document.getElementById('finalresult').innerHTML = 'eleventh outcome';
            // document.getElementById('result').style.backgroundImage = "url('https://images.riverisland.com/is/image/RiverIsland/792382_main?wid=1200')";
    }
-  // working on twelfth outcome.. data below
-//   "result": ["231111", "231112", "231113", "231211", "231212", "231213", "231311", "231312", "231313", "232111", "232112", "232113", "232211", "232212", "232213", "232311", "232312", "232313", "233111", "233112", "233113", "233211", "233212", "233213", "233311", "233312", "233313"],
-//   else if ((res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')) {
-//     document.getElementById('finalresult').innerHTML = 'tenth outcome';
-//        // document.getElementById('result').style.backgroundImage = "url('https://images.riverisland.com/is/image/RiverIsland/792382_main?wid=1200')";
-//     }
-
+//    12th outcome
+    else if ((res==='231111')||(res==='231112')||(res==='231113')||(res==='231211')||(res==='231212')||(res==='231213')||(res==='231311')||(res==='231312')||(res==='231313')||(res==='232111')||(res==='232112')||(res==='232113')||(res==='232211')||(res==='232212')||(res==='232213')||(res==='232311')||(res==='232312')||(res==='232313')||(res==='233111')||(res==='233112')||(res==='233113')||(res==='233211')||(res==='233212')||(res==='233213')||(res==='233311')||(res==='233312')||(res==='233313')) {
+        document.getElementById('finalresult').innerHTML = 'tenth outcome';
+        // document.getElementById('result').style.backgroundImage = "url('https://images.riverisland.com/is/image/RiverIsland/792382_main?wid=1200')";
+    }
+    // 13th outcome
+    else if ((res==='231121')||(res==='231122')||(res==='231123')||(res==='231221')||(res==='231222')||(res==='231223')||(res==='231321')||(res==='231322')||(res==='231323')||(res==='232121')||(res==='232122')||(res==='232123')||(res==='232221')||(res==='232222')||(res==='232223')||(res==='232321')||(res==='232322')||(res==='232323')||(res==='233121')||(res==='233122')||(res==='233123')||(res==='233221')||(res==='233222')||(res==='233223')||(res==='233321')||(res==='233322')||(res==='233323')) {
+        document.getElementById('finalresult').innerHTML = 'tenth outcome';
+            // document.getElementById('result').style.backgroundImage = "url('https://images.riverisland.com/is/image/RiverIsland/792382_main?wid=1200')";
+     }
+  // 14th outcome 
+    else if ((res==='311111')||(res ==='311112')||(res === '311113')||(res==='311121')||(res ==='311122')||(res === '311123')||(res==='311131')||(res ==='311132')||(res === '311133')||(res==='311211')||(res ==='311212')||(res === '311213')||(res==='311221')||(res ==='311222')||(res === '311223')||(res==='311231')||(res ==='311232')||(res === '311233')||(res==='999')||(res ==='311311')||(res === '311312')||(res==='311313')||(res ==='311321')||(res === '311322')||(res==='311323')||(res ==='999')||(res === '311331')||(res==='311332')||(res ==='311333')||(res === '312111')||(res==='312112')||(res ==='312113')||(res === '312121')||(res==='312122')||(res ==='312123')||(res === '312131')||(res==='312132')||(res ==='312133')||(res === '312211')||(res==='312212')||(res ==='312213')||(res === '312221')||(res==='312222')||(res ==='312223')||(res === '312231')||(res==='312232')||(res ==='312233')||(res === '312311')||(res==='312312')||(res ==='312313')||(res === '312321')||(res==='312322')||(res ==='312323')||(res === '312331')||(res==='312332')||(res ==='312333')||(res === '313111')||(res==='313112')||(res ==='313113')||(res === '313121')||(res==='313122')||(res ==='313123')||(res === '313131')||(res==='313132')||(res ==='313133')||(res === '313211')||(res==='313212')||(res ==='313213')||(res === '313221')||(res==='313222')||(res ==='313223')||(res === '313231')||(res==='313232')||(res ==='313233')||(res === '313311')||(res==='313312')||(res ==='313313')||(res === '313321')||(res==='313322')||(res ==='313323')||(res === '313331')||(res==='313332')||(res ==='313333')||(res === '321111')||(res==='321112')||(res ==='321113')||(res === '321121')||(res==='321122')||(res ==='321123')||(res === '321131')||(res==='321132')||(res ==='321133')||(res === '321211')||(res==='321212')||(res ==='321213')||(res === '321221')||(res==='321222')||(res ==='321223')||(res === '321231')||(res==='321232')||(res ==='321233')||(res === '321311')||(res==='321312')||(res ==='321313')||(res === '321321')||(res==='321322')||(res ==='321323')||(res === '321331')||(res==='321332')||(res ==='321333')||(res === '322111')||(res==='322112')||(res ==='322113')||(res === '322121')||(res==='322122')||(res ==='322123')||(res === '322131')||(res==='322132')||(res ==='322133')||(res === '322211')||(res==='322212')||(res ==='322213')||(res === '322221')||(res==='322222')||(res ==='322223')||(res === '322231')||(res==='322232')||(res ==='322233')||(res === '322311')||(res==='322312')||(res ==='322313')||(res === '322321')||(res==='322322')||(res ==='322323')||(res === '322331')||(res==='322332')||(res ==='322333')||(res === '323111')||(res==='323112')||(res ==='323113')||(res === '323121')||(res==='323122')||(res ==='323123')||(res === '323131')||(res==='323132')||(res ==='323133')||(res === '323211')||(res==='323212')||(res ==='323213')||(res === '323221')||(res==='323222')||(res ==='323223')||(res === '323231')||(res==='323232')||(res ==='323233')||(res === '323311')||(res==='323312')||(res ==='323313')||(res === '323321')||(res==='323322')||(res ==='323323')||(res === '323331')||(res==='323332')||(res ==='323333')) {  
+    document.getElementById('finalresult').innerHTML = 'tenth outcome';
+        // document.getElementById('result').style.backgroundImage = "url('https://images.riverisland.com/is/image/RiverIsland/792382_main?wid=1200')";
+    }
 
 
     }
