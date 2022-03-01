@@ -1,3 +1,41 @@
+
+
+// const checkboxContainers = document.getElementsByClassName('container');
+
+// for (let i=0; i < checkboxContainers.length; i++) {
+//     checkboxContainers[i].addEventListener('click', function(){
+//         checkboxContainers[i].querySelector('.image').style.border = 'none';
+//         // check if the checkbox selected has an image first, if so add the border
+//         if (this.querySelector('.image')) {
+//             this.querySelector('.image').style.border = '2px solid black';
+//         }
+//         else {
+//             return;
+//         }
+//     });
+// }
+
+
+const checkboxContainers = document.getElementsByClassName('container');
+const checkboxWithImage = document.querySelectorAll('.container .image');
+
+for (let i=0; i < checkboxContainers.length; i++) {
+    checkboxContainers[i].addEventListener('click', function(){
+            // get all checkboxes with images only, and remove the border from each.
+             for (let i=0; i < checkboxWithImage.length; i++) {
+                checkboxWithImage[i].style.border = 'none';
+            }
+            //  if the checkbox CLICKED has an image , add the border
+            if (this.querySelector('.image')) {
+                if ( this.querySelector('input').checked === true) {
+                    this.querySelector('.image').style.border = '2px solid black';
+                }
+     }
+    });
+}
+
+
+
 function getResult(){
  
     let question1;
@@ -28,6 +66,7 @@ function getResult(){
     function questionTwo(){
        if (document.getElementById('all__for__it').checked === true) {
           question2 = '1'
+          document.getElementsByClassName('image.all__for__it').style.border = '2px solid black';
        }
        else if (document.getElementById('just__a__hint').checked === true) {
            question2 = '2'
@@ -167,9 +206,19 @@ function getResult(){
            // document.getElementById('result').style.backgroundImage = "url('https://images.riverisland.com/is/image/RiverIsland/792382_main?wid=1200')";
    }
   // working on twelfth outcome.. data below
-  "result": ["231111", "231112", "231113", "231211", "231212", "231213", "231311", "231312", "231313", "232111", "232112", "232113", "232211", "232212", "232213", "232311", "232312", "232313", "233111", "233112", "233113", "233211", "233212", "233213", "233311", "233312", "233313"],
-  else if ((res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')) {
-    document.getElementById('finalresult').innerHTML = 'tenth outcome';
-       // document.getElementById('result').style.backgroundImage = "url('https://images.riverisland.com/is/image/RiverIsland/792382_main?wid=1200')";
+//   "result": ["231111", "231112", "231113", "231211", "231212", "231213", "231311", "231312", "231313", "232111", "232112", "232113", "232211", "232212", "232213", "232311", "232312", "232313", "233111", "233112", "233113", "233211", "233212", "233213", "233311", "233312", "233313"],
+//   else if ((res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')||(res==='999')) {
+//     document.getElementById('finalresult').innerHTML = 'tenth outcome';
+//        // document.getElementById('result').style.backgroundImage = "url('https://images.riverisland.com/is/image/RiverIsland/792382_main?wid=1200')";
+//     }
+
+
+
     }
+
+
+    // call this when user closes the quiz, to unselect all radio boxes
+function removeChecked() {
+    $('input').prop('checked', false);
     }
+
