@@ -68,26 +68,52 @@ input[type="radio"], input[type="checkbox"] {
   display: block;
 }
 
+div#quiz-app {
+    height: 100vh;
+    /* position: fixed; */
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 3rem 50% 3rem 1.5rem;
+    background-color: #f7f3ED;
+}
 
 .question.one {
-  display: block;
+  display: flex;
 }
 .question.two {
-  display: block;
+  display: none;
 }
 .question.three {
-  display: block;
+  display: none;
 }
 .question.four {
-  display: block;
+  display: none;
 }
 .question.five {
-  display: block;
+  display: none;
 }
 .question.six {
-  display: block;
+  display: none;
 }
- 
+
+.next__prev button {
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 0.5px solid #EEEEEE;
+    padding: 2% 5%;
+    font-size: 16px;
+}
+.next__prev {
+    padding-top: 3rem;
+}
+button.prev__button {
+    margin-right: 3rem;
+}
 
 #result {
   padding-top: 20%;
@@ -105,14 +131,17 @@ input[type='radio']+label:not(.label-like):before {
 .container {
   display: block;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
+  padding-left: 45px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 16px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+label.container:nth-child(2) {
+    margin: 1.6rem 0;
 }
  
 /* Hide the browser's default checkbox */
@@ -126,12 +155,14 @@ input[type='radio']+label:not(.label-like):before {
  
 /* Create a custom checkbox */
 .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 30px;
-  width: 30px;
-  background-color: #eee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+    border: 1px solid black;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
 }
  
 /* On mouse-over, add a grey background color */
