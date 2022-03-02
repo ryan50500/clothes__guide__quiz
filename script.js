@@ -1,22 +1,58 @@
 
 
+// add border when image is clicked
 const checkboxContainers = document.getElementsByClassName('container');
-const checkboxWithImage = document.querySelectorAll('.container .image');
+const checkboxWithImage = document.querySelectorAll('.container .question__image');
 
 for (let i=0; i < checkboxContainers.length; i++) {
     checkboxContainers[i].addEventListener('click', function(){
+        console.log('sadasas')
             // get all checkboxes with images only, and remove the border from each.
              for (let i=0; i < checkboxWithImage.length; i++) {
                 checkboxWithImage[i].style.border = 'none';
             }
             //  if the checkbox CLICKED has an image , add the border
-            if (this.querySelector('.image')) {
+            if (this.querySelector('.question__image')) {
                 if ( this.querySelector('input').checked === true) {
-                    this.querySelector('.image').style.border = '2px solid black';
+                    this.querySelector('.question__image').style.border = '2px solid black';
                 }
      }
     });
 }
+
+
+
+// Next question 
+// Get all Next buttons 
+const nextButtons = document.querySelectorAll('.next__button');
+for (let i=0; i < nextButtons.length; i++) {
+    nextButtons[i].addEventListener('click', function(){
+        // Whichever Next button is clicked, go up DOM tree and find which question it is with '.closest()' method.
+        const currentQuestion = this.closest(".question");
+        // bring in the next question
+        currentQuestion.nextElementSibling.style.left = "0"
+        // remove the current question
+        currentQuestion.style.left = "-100%"
+    });
+}
+
+
+// Prev question 
+// Get all Prev buttons 
+const prevButtons = document.querySelectorAll('.prev__button');
+// Go to Previous Question on click
+for (let i=0; i < prevButtons.length; i++) {
+    prevButtons[i].addEventListener('click', function(){
+        // Whichever Previous button is clicked, go up DOM tree and find which question it is with '.closest()' method.
+        const currentQuestion = this.closest(".question");
+          // bring back the previous question
+          currentQuestion.previousElementSibling.style.left = "0"
+         // remove the current question
+          currentQuestion.style.left = "100%"
+    });
+}
+
+
 
 
 
@@ -223,5 +259,5 @@ function getResult(){
     // call this when user closes the quiz, to unselect all radio boxes
 function removeChecked() {
     $('input').prop('checked', false);
-    }
+}
 
