@@ -75,35 +75,6 @@ div#quiz-app {
 }
 
 
-
-
-/* move current question left */
-.move__question__left{
-  animation-name: slideLeft;
-  animation-duration: 1.7s;
-  animation-fill-mode: forwards;
-}
-@keyframes slideLeft {
-  from {left: 0;}
-  to {left: -100%;}
-}
-
-
-
-/* move current question right */
-.move__question__right{
-  animation-name: slideRight;
-  animation-duration: 1.7s;
-  animation-fill-mode: forwards;
-}
-@keyframes slideRight {
-  from {left: 100%;}
-  to {left: 0;}
-}
- 
-
-
-
 .error__message {
   color: #D65449;
   /* visibility: hidden;  */
