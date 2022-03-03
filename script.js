@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
+
 // add border when image is clicked
 const checkboxContainers = document.getElementsByClassName('container');
 for (let i=0; i < checkboxContainers.length; i++) {
@@ -23,11 +24,13 @@ for (let i=0; i < checkboxContainers.length; i++) {
     });
 }
 
-    // if user selects options, hide the error message and checkbox error
+    // hide error message and red border
     const options = document.querySelectorAll('.container input');
     for (let i=0; i < options.length; i++) {
+        // when an option is selected by user
         options[i].addEventListener('change', function() {
         if (this.checked) {
+            // find current question
             const currentQuestion = this.closest(".question");
             // hide current error message
             currentQuestion.querySelector('.error__message').style.visibility = 'hidden';
@@ -94,6 +97,12 @@ for (let i=0; i < prevButtons.length; i++) {
     });
 }
 
+
+// close quiz when cross is clicked
+const cross = document.getElementsByClassName('cross')[0];
+cross.addEventListener('click', function(){
+    document.getElementById('quiz-app').style.display = "none";
+});
 
 
 
@@ -295,7 +304,7 @@ function getResult(){
 }
 
 
-    // call this when user closes the quiz, to unselect all radio boxes
+// call this when user closes the quiz, to unselect all radio boxes
 function removeChecked() {
     $('input').prop('checked', false);
 }

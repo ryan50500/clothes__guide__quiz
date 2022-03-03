@@ -74,6 +74,31 @@ div#quiz-app {
   position: fixed;
 }
 
+.cross {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  width: 27px;
+  height: 32px;
+  z-index: 1;
+  cursor: pointer;
+}
+.cross__one {
+  height: 35px;
+  width: 2px;
+  margin-left: 12px;
+  background-color: #252525;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+.cross__two {
+  height: 35px;
+  width: 2px;
+  background-color: #252525;
+  transform: rotate(90deg);
+  z-index: 2;
+}
+
 
 .error__message {
   color: #D65449;
@@ -94,7 +119,7 @@ div#quiz-app {
     top: 0;
     left: 100%;
     width: 100%;
-    transition: 0.6s left;
+    transition: 0.4s left;
 }
 /* .question:nth-child(even) {
   background-color: #256238;
