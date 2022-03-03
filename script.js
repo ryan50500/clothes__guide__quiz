@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded", function (event) {
-
+document.addEventListener("DOMContentLoaded", function () {
 
 
 // add border when image is clicked
@@ -14,7 +13,7 @@ for (let i=0; i < checkboxContainers.length; i++) {
              for (let i=0; i < checkboxWithImage.length; i++) {
                 checkboxWithImage[i].style.border = 'none';
             }
-            //  if the checkbox CLICKED has an image , add the border
+            //  if the question has images , add the border when clicked
             if (this.querySelector('.question__image')) {
                 if ( this.querySelector('input').checked === true) {
                     this.querySelector('.question__image').style.border = '2px solid black';
@@ -24,23 +23,22 @@ for (let i=0; i < checkboxContainers.length; i++) {
     });
 }
 
-    // if user selects options, hide the error message
+    // if user selects options, hide the error message and checkbox error
     const options = document.querySelectorAll('.container input');
     for (let i=0; i < options.length; i++) {
-        options[i].addEventListener('change', function (event) {
+        options[i].addEventListener('change', function() {
         if (this.checked) {
             const currentQuestion = this.closest(".question");
+            // hide current error message
             currentQuestion.querySelector('.error__message').style.visibility = 'hidden';
+            const currentCheckboxes = this.closest(".question").querySelectorAll('.container .checkmark');
+            for (let i=0; i < currentCheckboxes.length; i++) {
+                currentCheckboxes[i].style.border = '1px solid black';
+            }
         } 
     });
 }
 
-
-    //   // show Checkboxes as red if not selected
-    //   const CurrentCheckboxes = currentQuestion.querySelectorAll('.container .checkmark')
-    //   for (let i=0; i < CurrentCheckboxes.length; i++) {
-    //       CurrentCheckboxes[i].style.border = '2px solid #D65449';
-    //   }
 
 
 // Next question 
@@ -206,13 +204,12 @@ function getResult(){
      }
      questionSix();
     
-     
  
  
     //  add up the string values of each queston and put it into variable called 'res'
      let res = (question1 + question2 + question3 + question4 + question5 + question6);
      console.log(res);
- 
+
  
  
     // first outcome
@@ -295,9 +292,7 @@ function getResult(){
     else {
         return;
     }
-
-
-    }
+}
 
 
     // call this when user closes the quiz, to unselect all radio boxes
