@@ -80,7 +80,7 @@ div#quiz-app {
   right: 20px;
   width: 27px;
   height: 32px;
-  z-index: 1;
+  z-index: 2;
   cursor: pointer;
 }
 .cross__one {
@@ -196,6 +196,18 @@ input[type='radio']+label:not(.label-like):before {
   display: none;
 }
  
+
+#finalresult {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  background-color: lightblue;
+  z-index: 1;
+}
 
 /* The container */
 .container {
