@@ -1,13 +1,16 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
 
+
 // add border when image is clicked
 const checkboxContainers = document.getElementsByClassName('container');
-const checkboxWithImage = document.querySelectorAll('.container .question__image');
 
 for (let i=0; i < checkboxContainers.length; i++) {
     checkboxContainers[i].addEventListener('click', function(){
-        console.log('sadasas')
+        const currentQuestion = this.closest('.question');
+        // if current question has images then continue
+        if (currentQuestion.querySelectorAll('.container .question__image')){
+            const checkboxWithImage = currentQuestion.querySelectorAll('.container .question__image');
             // get all checkboxes with images only, and remove the border from each.
              for (let i=0; i < checkboxWithImage.length; i++) {
                 checkboxWithImage[i].style.border = 'none';
@@ -17,7 +20,8 @@ for (let i=0; i < checkboxContainers.length; i++) {
                 if ( this.querySelector('input').checked === true) {
                     this.querySelector('.question__image').style.border = '2px solid black';
                 }
-     }
+           }
+        }
     });
 }
 
