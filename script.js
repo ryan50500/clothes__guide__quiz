@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function (event) {
 
 
 // add border when image is clicked
@@ -21,18 +22,48 @@ for (let i=0; i < checkboxContainers.length; i++) {
 }
 
 
+    // if user selects options, hide the error message
+    const options = document.querySelectorAll('.container input');
+    for (let i=0; i < options.length; i++) {
+        options[i].addEventListener('change', function (event) {
+        if (this.checked) {
+            const currentQuestion = this.closest(".question");
+            currentQuestion.querySelector('.error__message').style.visibility = 'hidden';
+        } 
+    });
+}
+
 
 // Next question 
+
 // Get all Next buttons 
 const nextButtons = document.querySelectorAll('.next__button');
 for (let i=0; i < nextButtons.length; i++) {
     nextButtons[i].addEventListener('click', function(){
         // Whichever Next button is clicked, go up DOM tree and find which question it is with '.closest()' method.
         const currentQuestion = this.closest(".question");
-        // bring in the next question
-        currentQuestion.nextElementSibling.style.left = "0"
-        // remove the current question
-        currentQuestion.style.left = "-100%"
+            //  'isNotChecked' will be assigned to true if no boxes are ticked.
+            const nothingChecked = currentQuestion.querySelectorAll('.container input:checked').length === 0 ? true : false;
+                // if no boxes are ticked is True..
+                if (nothingChecked) {
+                    console.log('nothing checked');
+                    // show error message
+                    currentQuestion.querySelector('.error__message').style.visibility = 'visible';
+
+                    // get current options in question
+                    const currentOptions = currentQuestion.querySelectorAll('.container .question__image');
+                    for (let i=0; i < currentOptions.length; i++) {
+                        currentOptions[i].style.border = '2px solid #D65449';
+                    }
+                }
+                else {
+                    console.log('an option was checked');
+                    currentQuestion.querySelector('.error__message').style.visibility = 'hidden';
+                    // bring in the next question
+                    currentQuestion.nextElementSibling.style.left = "0";
+                    // remove the current question
+                    currentQuestion.style.left = "-100%";
+                }
     });
 }
 
@@ -49,6 +80,16 @@ for (let i=0; i < prevButtons.length; i++) {
           currentQuestion.previousElementSibling.style.left = "0"
          // remove the current question
           currentQuestion.style.left = "100%"
+             //  'isNotChecked' will be assigned to true if no boxes are ticked.
+             const nothingChecked = currentQuestion.querySelectorAll('.container input:checked').length === 0 ? true : false;
+            //  if no boxes are ticked is True..
+            //  if (nothingChecked) {
+            //      console.log('nothing checked');
+            //      currentQuestion.querySelector('.error__message').style.visibility = 'visible';
+            //  }
+            //  else {
+            //     currentQuestion.querySelector('.error__message').style.visibility = 'hidden';
+            //  }
     });
 }
 
@@ -86,7 +127,7 @@ function getResult(){
     function questionTwo(){
        if (document.getElementById('all__for__it').checked === true) {
           question2 = '1'
-          document.getElementsByClassName('image.all__for__it').style.border = '2px solid black';
+
        }
        else if (document.getElementById('just__a__hint').checked === true) {
            question2 = '2'
@@ -261,3 +302,5 @@ function removeChecked() {
     $('input').prop('checked', false);
 }
 
+
+});
