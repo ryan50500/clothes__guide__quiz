@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 // add border when image is clicked
 const checkboxContainers = document.getElementsByClassName('container');
-
 for (let i=0; i < checkboxContainers.length; i++) {
     checkboxContainers[i].addEventListener('click', function(){
         const currentQuestion = this.closest('.question');
@@ -25,7 +24,6 @@ for (let i=0; i < checkboxContainers.length; i++) {
     });
 }
 
-
     // if user selects options, hide the error message
     const options = document.querySelectorAll('.container input');
     for (let i=0; i < options.length; i++) {
@@ -38,8 +36,14 @@ for (let i=0; i < checkboxContainers.length; i++) {
 }
 
 
-// Next question 
+    //   // show Checkboxes as red if not selected
+    //   const CurrentCheckboxes = currentQuestion.querySelectorAll('.container .checkmark')
+    //   for (let i=0; i < CurrentCheckboxes.length; i++) {
+    //       CurrentCheckboxes[i].style.border = '2px solid #D65449';
+    //   }
 
+
+// Next question 
 // Get all Next buttons 
 const nextButtons = document.querySelectorAll('.next__button');
 for (let i=0; i < nextButtons.length; i++) {
@@ -53,7 +57,11 @@ for (let i=0; i < nextButtons.length; i++) {
                     console.log('nothing checked');
                     // show error message
                     currentQuestion.querySelector('.error__message').style.visibility = 'visible';
-
+                      // show Checkboxes as red if not selected
+                    const CurrentCheckboxes = currentQuestion.querySelectorAll('.container .checkmark')
+                    for (let i=0; i < CurrentCheckboxes.length; i++) {
+                        CurrentCheckboxes[i].style.border = '2px solid #D65449';
+                    }
                     // get current options in question
                     const currentOptions = currentQuestion.querySelectorAll('.container .question__image');
                     for (let i=0; i < currentOptions.length; i++) {
@@ -84,16 +92,7 @@ for (let i=0; i < prevButtons.length; i++) {
           currentQuestion.previousElementSibling.style.left = "0"
          // remove the current question
           currentQuestion.style.left = "100%"
-             //  'isNotChecked' will be assigned to true if no boxes are ticked.
-             const nothingChecked = currentQuestion.querySelectorAll('.container input:checked').length === 0 ? true : false;
-            //  if no boxes are ticked is True..
-            //  if (nothingChecked) {
-            //      console.log('nothing checked');
-            //      currentQuestion.querySelector('.error__message').style.visibility = 'visible';
-            //  }
-            //  else {
-            //     currentQuestion.querySelector('.error__message').style.visibility = 'hidden';
-            //  }
+
     });
 }
 
