@@ -275,4 +275,17 @@ label.container:nth-child(2) {
 .container:last-child .question__image, .container:nth-last-child(2) .question__image {
     background-image: linear-gradient(#C4C4C4, #C4C4C4, #f7f3ED);
   }
+  .question {
+    padding: 15% 5%;
+  }
+  .question__image {
+    width: 150px;
+    height: 180px;
+  }
+  .question.two .checkbox__wrapper {
+    justify-content: space-evenly;
+  }
+  .question.two .container {
+    margin: 0;
+  }
 }
