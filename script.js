@@ -232,9 +232,9 @@ const cross = document.getElementsByClassName('cross')[0];
           question6 = '3'
       }
       console.log(question6);
-    //  check if the final question has an option selected
+    //  check if the final question has an option selected. If no boxes are ticked, set it to True..
       const nothingChecked = document.querySelectorAll('.question.six input:checked').length === 0 ? true : false;
-         // if no boxes are ticked, set it to True..
+         // if no boxes are ticked, exit the function.
         if (nothingChecked) {
             return;
         }
