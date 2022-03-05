@@ -283,7 +283,7 @@ label.container:nth-child(2) {
     height: 180px;
   }
   .question.two .checkbox__wrapper {
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   .question.two .container {
     margin: 0;
