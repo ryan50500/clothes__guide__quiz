@@ -271,11 +271,8 @@ label.container:nth-child(2) {
   transform: rotate(45deg);
 }
  
-
-/* mobile */
 @media (max-width: 767px) {
-  /* add fade margin to last two items on mobile */
-  .container:last-child .question__image, .container:nth-last-child(2) .question__image {
+.container:last-child .question__image, .container:nth-last-child(2) .question__image {
     background-image: linear-gradient(#C4C4C4, #C4C4C4, #f7f3ED);
   }
 }
