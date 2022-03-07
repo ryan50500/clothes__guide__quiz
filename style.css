@@ -184,17 +184,16 @@ button.prev__button {
 input[type='radio']+label:not(.label-like):before {
   display: none;
 }
- 
 
 #finalresult {
   width: 100%;
   display: none;
   position: absolute;
+  visibility: hidden;
   top: 0;
   left: 0;
   height: 100%;
   position: fixed;
-  z-index: 1;
 }
 .finalresult__image {
   width: 50%;
@@ -202,6 +201,75 @@ input[type='radio']+label:not(.label-like):before {
   height: 100%;
   background-position: center;
 }
+
+
+/* 1st outcome image { */
+  .res__one__wrapper {
+    display: none;
+    visibility: hidden;
+}
+  .res__one{
+      background-image: url("https://images.riverisland.com/is/image/RiverIsland/780815_main?cc&$retina$");
+  }
+  /* 2nd outcome image { */
+   .res__two {
+      background-image: url("https://images.riverisland.com/is/image/RiverIsland/792382_main?cc&$retina$");
+    }
+    /* 3rd outcome image { */
+  .res__three {
+      background-image: url("https://images.riverisland.com/is/image/RiverIsland/781561_main?cc&$retina$");
+  }
+  /* 4th outcome image { */
+    .res__four {
+      background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+    }
+     /* 5th outcome image { */
+      .res__five {
+        background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+      }
+       /* 6th outcome image { */
+    .res__six {
+      background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+    }
+     /* 7th outcome image { */
+      .res__seven {
+        background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+      }
+       /* 8th outcome image { */
+    .res__eight {
+      background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+    }
+    /* 9th outcome image { */
+      .res__nine {
+        background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+      }
+    /* 10th outcome image { */
+    .res__ten {
+      background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+    }
+      /* 11th outcome image { */
+       .res__eleven {
+         background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+       }
+       /* 12th outcome image { */
+    .res__twelve {
+      background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+    }
+     /* 13th outcome image { */
+      .res__thirteen {
+        background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+      }
+     /* 14th outcome image { */
+    .res__fourteen {
+      background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+    }
+     /* 15th outcome image { */
+      .res__fifteen{
+        background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+      }
+
+
+
 .recommendation {
   width: 50%;
   height: 100%;

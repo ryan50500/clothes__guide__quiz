@@ -1,5 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    // load results images
+    setTimeout(function(){
+        document.getElementById('finalresult').style.display = 'flex';
+        document.querySelector('.res__one__wrapper').style.display = "block";
+        document.querySelector('.res__two__wrapper').style.display = "block";
+        document.querySelector('.res__three__wrapper').style.display = "block";
+        document.querySelector('.res__four__wrapper').style.display = "block";
+        document.querySelector('.res__five__wrapper').style.display = "block";
+        document.querySelector('.res__six__wrapper').style.display = "block";
+        document.querySelector('.res__seven__wrapper').style.display = "block";
+        document.querySelector('.res__eight__wrapper').style.display = "block";
+        document.querySelector('.res__nine__wrapper').style.display = "block";
+        document.querySelector('.res__ten__wrapper').style.display = "block";
+        document.querySelector('.res__eleven__wrapper').style.display = "block";
+        document.querySelector('.res__twelve__wrapper').style.display = "block";
+        document.querySelector('.res__thirteen__wrapper').style.display = "block";
+        document.querySelector('.res__fourteen__wrapper').style.display = "block";
+        document.querySelector('.res__fifteen__wrapper').style.display = "block";
+    }, 3000);
 
 
     // add border when image is clicked
@@ -254,20 +273,27 @@ document.addEventListener("DOMContentLoaded", function () {
          console.log(res);
     
          document.getElementById('finalresult').style.display = 'flex';
+         document.getElementById('finalresult').style.visibility = 'visible';
      
         // 1st outcome
         if ((res==='121111')||(res==='121112')||(res ==='121113')||(res === '121211')||(res==='121212')||(res==='121213')||(res==='121311')||(res==='121312')||(res==='121313')||(res==='121313')||(res==='121313')||(res==='122111')||(res==='122112')||(res==='122113')||(res==='122312')||(res==='122211')||(res==='122212')||(res==='122213')||(res==='122313')||(res==='123111')||(res==='123112')||(res==='123112')||(res==='123113')||(res==='123211')||(res==='123212')||(res==='123213')||(res==='123311')||(res==='123312')||(res==='123313')||(res==='131111')||(res==='131112')||(res==='131121')||(res==='131121')||(res==='131122')||(res==='131122')||(res==='131211')||(res==='131212')||(res==='131221')||(res==='131222')||(res==='131311')||(res==='131311')||(res==='131312')||(res==='131312')||(res==='131321')||(res==='131322')||(res==='132111')||(res==='132112')||(res==='132121')||(res==='132122')||(res==='132211')||(res==='132211')||(res==='132212')||(res==='132221')||(res==='132222')||(res==='132311')||(res==='132312')||(res==='132321')||(res==='133111')||(res==='133112')||(res==='133121')||(res==='133122')||(res==='133211')||(res==='133212')||(res==='133221')||(res==='133312')||(res==='133321')||(res==='133322')||(res==='133311')||(res==='133222')) {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        "", "", "", "", "", "", "", "", "", "", "",                                                                                                                                  "", "", "", "", "", "",                                         
-              document.querySelector('#finalresult__title span').innerHTML = 'Looks like you\'re the MOLLY'
-              document.querySelector('.finalresult__image').style.backgroundImage = "url('https://images.riverisland.com/is/image/RiverIsland/780815_main?cc&$retina$')";
-              document.querySelector('#finalresult__text span').innerHTML = 'Always tight, always right, the Molly is the perfect match for those who’ve got it – and flaunt it.'
-              document.querySelector('#finalresult__cat button span').innerHTML = 'Shop all Straight jeans'
-              document.getElementById('finalresult__rec').setAttribute('href', '/c/women/jeans?f-cat=jeggings&f-cat=skinny-jeans')
+              document.querySelector('#finalresult__title span').innerHTML = 'Looks like you\'re the MOLLY';
+              document.querySelector('.finalresult__image').classList.add('res__one');
+              document.querySelector('#finalresult__text span').innerHTML = 'Always tight, always right, the Molly is the perfect match for those who’ve got it – and flaunt it.';
+              document.querySelector('#finalresult__cat button span').innerHTML = 'Shop Molly jeans';
+              document.getElementById('finalresult__rec').setAttribute('href', '/c/women/jeans?f-fit=bum-sculpt&f-cat=jeggings&f-cat=skinny-jeans');
+              document.querySelector('#finalresult__cat').setAttribute('href', '/c/women/jeans');
              
         }
          // 2nd outcome
         else if ((res==='121123')||(res==='121223')||(res==='121323')||(res==='122123')||(res==='122223')||(res==='122323')||(res==='123123')||(res==='123223')||(res==='123323')) {
-            document.querySelector('#finalresult__title span').innerHTML = 'second outcome';
-           // document.getElementById('result').style.backgroundImage = "url('https://images.riverisland.com/is/image/RiverIsland/792382_main?wid=1200')";
+            document.querySelector('#finalresult__title span').innerHTML = 'Looks like you\'re the MOLLY';
+            document.querySelector('.finalresult__image').classList.add('res__two');
+            document.querySelector('#finalresult__text span').innerHTML = 'Always tight, always right. We would recommend the Blue Molly mid rise bum sculpt jeans.';
+            document.querySelector('#finalresult__cat button span').innerHTML = 'Shop Molly jeans';
+            document.getElementById('finalresult__rec').setAttribute('href', '/c/women/jeans?f-fit=bum-sculpt&f-cat=jeggings&f-cat=skinny-jeans');
+            document.querySelector('#finalresult__cat').setAttribute('href', '/c/women/jeans');
+
         }
          // 3rd outcome
         else if ((res==='121133')||(res==='121233')||(res==='121333')||(res==='122133')||(res==='122233')||(res==='122333')||(res==='123133')||(res==='123233')||(res==='123333')) {
