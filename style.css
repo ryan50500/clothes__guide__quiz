@@ -203,6 +203,7 @@ input[type='radio']+label:not(.label-like):before {
 }
 
 
+
 /* 1st outcome image { */
   .res__one__wrapper {
     display: none;
@@ -225,47 +226,47 @@ input[type='radio']+label:not(.label-like):before {
     }
      /* 5th outcome image { */
       .res__five {
-        background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+        background-image: url("https://images.riverisland.com/is/image/RiverIsland/779666_main?cc&$retina$");
       }
        /* 6th outcome image { */
     .res__six {
-      background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+      background-image: url("https://images.riverisland.com/is/image/RiverIsland/780697_main?cc&$retina$");
     }
      /* 7th outcome image { */
       .res__seven {
-        background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+        background-image: url("https://images.riverisland.com/is/image/RiverIsland/786616_main?cc&$retina$");
       }
        /* 8th outcome image { */
     .res__eight {
-      background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+      background-image: url("https://images.riverisland.com/is/image/RiverIsland/786616_main?cc&$retina$");
     }
     /* 9th outcome image { */
       .res__nine {
-        background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+        background-image: url("https://images.riverisland.com/is/image/RiverIsland/780496_main?cc&$retina$");
       }
     /* 10th outcome image { */
     .res__ten {
-      background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+      background-image: url("https://images.riverisland.com/is/image/RiverIsland/779451_main?cc&$retina$");
     }
       /* 11th outcome image { */
        .res__eleven {
-         background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+         background-image: url("https://images.riverisland.com/is/image/RiverIsland/783428_main?cc&$retina$");
        }
        /* 12th outcome image { */
     .res__twelve {
-      background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+      background-image: url("https://images.riverisland.com/is/image/RiverIsland/782863_main?cc&$retina$");
     }
      /* 13th outcome image { */
       .res__thirteen {
-        background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+        background-image: url("https://images.riverisland.com/is/image/RiverIsland/781560_rollover?cc&$retina$");
       }
      /* 14th outcome image { */
     .res__fourteen {
-      background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+      background-image: url("https://images.riverisland.com/is/image/RiverIsland/781504_main?cc&$retina$");
     }
      /* 15th outcome image { */
       .res__fifteen{
-        background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
+        background-image: url("https://images.riverisland.com/is/image/RiverIsland/787423_main?cc&$retina$");
       }
 
 
@@ -367,7 +368,7 @@ label.container:nth-child(2) {
 }
  
 @media (max-width: 767px) {
-.container:last-child .question__image, .container:nth-last-child(2) .question__image {
+  .container:last-child .question__image, .container:nth-last-child(2) .question__image {
     background-image: linear-gradient(#C4C4C4, #C4C4C4, #f7f3ED);
   }
   .question {
@@ -382,5 +383,24 @@ label.container:nth-child(2) {
   }
   .question.two .container {
     margin: 0;
+  }
+  #finalresult {
+   flex-direction: column;
+  }
+  .finalresult__image {
+    padding-top: 100%;
+    background-position: center;
+    width: 100%;
+  }
+  .recommendation {
+    width: 100%;
+  }
+h2#finalresult__title {
+  position: absolute;
+  top: 4%;
+  color: #ffffff;
+  }
+  .new__line {
+    display: block;
   }
 }
