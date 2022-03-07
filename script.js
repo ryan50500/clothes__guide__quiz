@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // load results images earlier, so results image doesn't load slowly for the user.
     setTimeout(function(){
-        const allImages = document.querySelectorAll('[class^=res__][class$="__wrapper"]');
+        const allImages = document.querySelectorAll('.hidden__image');
         for (let i=0; i < allImages.length; i++) {
             allImages[i].style.display = "block";
         }

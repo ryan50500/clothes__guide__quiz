@@ -205,7 +205,7 @@ input[type='radio']+label:not(.label-like):before {
 
 
 /* 1st outcome image { */
-  .res__one__wrapper {
+  .hidden__image {
     display: none;
     visibility: hidden;
 }
