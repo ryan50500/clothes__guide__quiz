@@ -78,9 +78,6 @@ div#quiz-app {
 	overflow-x: hidden;
 }
 
-.hide__quiz {
-	display: none;
-}
 
 .cross {
 	position: fixed;
