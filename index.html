@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
 </head>
 <body>
-
-<div id="quiz-app">
+ 
+<!-- quiz app hidden -->
+<div id="quiz-app" class="hide__quiz">
     <!-- close quiz cross -->
     <div class="cross">
         <div class="cross__one">
@@ -20,214 +21,216 @@
             </div>
         </div>
     </div>
-
-<div class="questions__wrapper">
-    <div class="question one">
-        <h2 class="question__title">Right, let’s get up close and personal. How tight do you like your denim to fit?</h2>
-    <div class="answers__and__buttons">
-        <div class="checkbox__wrapper">
-            <label class="container">
-                <span>On The Tighter Side</span>
-                <input type="radio" id="tighter__side" name="question1" value="tighter__side">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">
-                <span>Just Right</span>
-                <input type="radio" id="just__right" name="question1" value="just__right">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">
-                <span>Keep It Loose</span>
-                <input type="radio" id="keep__it__loose" name="question1" value="keep__it__loose">
-                <span class="checkmark"></span>
-            </label>
-         </div>
-         <div class="next__prev">
-             <p class="error__message">You need to select an answer to continue</p>
-            <button class="next__button one" id="button__one">Next</button>
+    <div class="questions__wrapper">
+        <div class="question one">
+            <h2 class="question__title">So, what's the occasion?</h2>
+            <div class="answers__and__buttons">
+                <div class="checkbox__wrapper">
+                    <label class="container">
+                    <div class="question__image"><img src="https://images.riverisland.com/is/image/RiverIsland/c20220309_wk13mwsmartquiz_Q1_1_DNT?cc&$retina$">
+                    </div>
+                    <span>Someone's saying
+                        'I do'
+                    </span>
+                    <input type="radio" id="i__do" name="question1" value="i__do">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                    <div class="question__image"><img src="https://images.riverisland.com/is/image/RiverIsland/c20220309_wk13mwsmartquiz_Q1_2_DNT?cc&$retina$">
+                    </div>
+                    <span>I'm off the the Races</span>
+                   <input type="radio" id="the__races" name="question1" value="the__races">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                    <div class="question__image"><img src="https://images.riverisland.com/is/image/RiverIsland/c20220309_wk13mwsmartquiz_Q1_3_DNT?cc&$retina$">
+                    </div>
+                    <span>It's for work. Get
+                        me that promotion
+                    </span>
+                    <input type="radio" id="that__promotion" name="question1" value="that__promotion">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                    <div class="question__image"><img src="https://images.riverisland.com/is/image/RiverIsland/c20220309_wk13mwsmartquiz_Q1_4_DNT?cc&$retina$">
+                    </div>
+                    <span>I've gotta get Prom
+                        ready
+                    </span>
+                    <input type="radio" id="prom__ready" name="question1" value="prom__ready">
+                    <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="next__prev">
+                    <p class="error__message">You need to select an answer to continue
+                    </p>
+                    <button class="next__button one" id="button__one">Next</button>
+                </div>
+            </div>
+        </div>
+        <div class="question two">
+            <h2 class="question__title">Sounds like a plan.
+                Which fit are you after?
+            </h2>
+            <div class="answers__and__buttons">
+                <div class="checkbox__wrapper">
+                    <label class="container">
+                    <div class="question__image"><img src="https://images.riverisland.com/is/image/RiverIsland/c20220309_wk13mwsmartquiz_Q2_2_DNT?cc&$retina$">
+                    </div>
+                    <span>Slim is my go-to</span>
+                    <input type="radio" id="slim__style" name="question2" value="slim__style">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                    <div class="question__image"><img src="https://images.riverisland.com/is/image/RiverIsland/c20220309_wk13mwsmartquiz_Q2_1_DNT?cc&$retina$">
+                    </div>
+                    <span>Skinny is my style</span>
+                    <input type="radio" id="skinny__style" name="question2" value="skinny__style">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                    <!-- this image is 2X the size of the others, so i gave it a fixed width -->
+                    <div class="question__image"><img style="width: 145px; height: 179px;" src="https://images.riverisland.com/is/image/RiverIsland/c20220309_wk13mwsmartquiz_big%26tall_1_DNT?cc&$retina$">
+                    </div>
+                    <span>Big & Tall for me </span>
+                    <input type="radio" id="big__tall" name="question2" value="big__tall">
+                    <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="next__prev">
+                    <p class="error__message">You need to select an answer to continue
+                    </p>
+                    <button class="prev__button two">←</button><button class="next__button two" id="button__two">Next</button>
+                </div>
+            </div>
+        </div>
+        <div class="question three">
+            <h2 class="question__title">Last but not least,
+                what colour are you thinking?
+            </h2>
+            <div class="answers__and__buttons">
+                <div class="checkbox__wrapper">
+                    <label class="container">
+                    <div class="question__image"><img src="https://images.riverisland.com/is/image/RiverIsland/c20220309_wk13mwsmartquiz_Q3_4_DNT?cc&$retina$">
+                    </div>
+                    <span>Navy, I'm bored of
+                        black
+                    </span>
+                    <input type="radio" id="navy" name="question3" value="navy">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                    <div class="question__image"><img src="https://images.riverisland.com/is/image/RiverIsland/c20220309_wk13mwsmartquiz_Q3_2_DNT?cc&$retina$">
+                    </div>
+                    <span>Classic black</span>
+                    <input type="radio" id="classic__black" name="question3" value="classic__black">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                    <div class="question__image"><img src="https://images.riverisland.com/is/image/RiverIsland/c20220309_wk13mwsmartquiz_Q3_1_DNT?cc&$retina$">
+                    </div>
+                    <span>Grey goes with
+                        anything
+                    </span>
+                    <input type="radio" id="grey__goes" name="question3" value="grey__goes">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">
+                    <div class="question__image"><img src="https://images.riverisland.com/is/image/RiverIsland/c20220309_wk13mwsmartquiz_Q3_3_DNT?cc&$retina$">
+                    </div>
+                    <span>Surprise me!</span>
+                    <input type="radio" id="surprise__me" name="question3" value="surprise__me">
+                    <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="next__prev">
+                    <p class="error__message">You need to select an answer to continue
+                    </p>
+                    <button class="prev__button three">←</button><button class="next__button three show__results" id="button__three">Next</button>
+                </div>
+            </div>
+       </div>
+    </div>
+    <!-- show finalresult -->
+    <div id="finalresult">
+        <div id="finalresult__image">
+        </div>
+        <div class="recommendation">
+            <h2 id="finalresult__title"><span>We've found your perfect suit</span></h2>
+            <p id="finalresult__text"><span>Thanks for taking the quiz, check out the suits that match your answers. We're pretty sure you're going to love them.</span>
+            </p>
+            <a href="" id="shop__now"><button><span>Shop Now</span></button></a>
         </div>
     </div>
-</div>
-
-
-
-<div class="question two">
-        <h2 class="question__title">Sounds good to us. How about that waistline – are you pro or anti belly button?</h2>
-    <div class="answers__and__buttons">
-        <div class="checkbox__wrapper">
-            <label class="container">
-                <div class="question__image"></div>
-                <span>All For It</span>
-                <input type="radio" id="all__for__it" name="question2" value="all__for__it">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">
-                <div class="question__image"></div>
-                <span>Just A Hint</span>
-                <input type="radio" id="just__a__hint" name="question2" value="just__a__hint">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">
-                <div class="question__image"></div>
-                <span>Keep It Hidden</span>
-                <input type="radio" id="keep__it__hidden" name="question2" value="keep__it__hidden">
-                <span class="checkmark"></span>
-            </label>
-        </div>
-        <div class="next__prev">
-            <p class="error__message">You need to select an answer to continue</p>
-            <button class="prev__button two">&#8592;</button><button class="next__button two" id="button__two">Next</button>
+    <!-- slim images -->
+    <div class="hidden__image">
+        <div class="slim__navy">
         </div>
     </div>
-</div>
-
-
-<div class="question three">
-        <h2 class="question__title">Seriously, same. But how would you best describe your shape?</h2>
-    <div class="answers__and__buttons">
-        <div class="checkbox__wrapper">
-            <label class="container">
-                <span>Tall drink of water</span>
-                <input type="radio" id="drink__of__water" name="question3" value="drink__of__water">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">
-                <span>Body like an hourglass</span>
-                <input type="radio" id="like__an__hourglass" name="question3" value="like__an__hourglass">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">
-                <span>These hips don’t lie</span>
-                <input type="radio" id="hips__dont__lie" name="question3" value="hips__dont__lie">
-                <span class="checkmark"></span>
-            </label>
+    <div class="hidden__image">
+        <div class="slim__black">
         </div>
-        <div class="next__prev">
-            <p class="error__message">You need to select an answer to continue</p>
-            <button class="prev__button three">&#8592;</button><button class="next__button three" id="button__three">Next</button>
+    </div>
+    <div class="hidden__image">
+        <div class="slim__grey">
+        </div>
+    </div>
+    <div class="hidden__image">
+        <div class="slim__beige">
+        </div>
+    </div>
+    <div class="hidden__image">
+        <div class="slim__blue">
+        </div>
+    </div>
+    <div class="hidden__image">
+        <div class="slim__brown">
+        </div>
+    </div>
+    <div class="hidden__image">
+        <div class="slim__green">
+        </div>
+    </div>
+    <!-- skinny images -->
+    <div class="hidden__image">
+        <div class="skinny__navy">
+        </div>
+    </div>
+    <div class="hidden__image">
+        <div class="skinny__black">
+        </div>
+    </div>
+    <div class="hidden__image">
+        <div class="skinny__grey">
+        </div>
+    </div>
+    <div class="hidden__image">
+        <div class="skinny__blue">
+        </div>
+    </div>
+    <div class="hidden__image">
+        <div class="skinny__brown">
+        </div>
+   </div>
+    <!-- big & tall images -->
+    <div class="hidden__image">
+        <div class="big__tall__navy">
+        </div>
+    </div>
+    <div class="hidden__image">
+        <div class="big__tall__black">
+        </div>
+    </div>
+    <div class="hidden__image">
+        <div class="big__tall__grey">
+        </div>
+    </div>
+    <div class="hidden__image">
+        <div class="big__tall__blue">
         </div>
     </div>
 </div>
  
-
-<div class="question four">
-        <h2 class="question__title">Looks good on you. Let’s talk length – to crop or not to crop?</h2>
-     <div class="answers__and__buttons">
-        <div class="checkbox__wrapper">
-            <label class="container">
-                <span>I need more</span>
-                <input type="radio" id="i__need__more" name="question4" value="i__need__more">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">
-                <span>As it comes</span>
-                <input type="radio" id="as__it__comes" name="question4" value="as__it__comes">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">
-                <span>I have shoes to show off</span>
-                <input type="radio" id="show__off" name="question4" value="show__off">
-                <span class="checkmark"></span>
-            </label>
-        </div>
-        <div class="next__prev">
-            <p class="error__message">You need to select an answer to continue</p>
-            <button class="prev__button four">&#8592;</button><button class="next__button four" id="button__four">Next</button>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="question five">
-        <h2 class="question__title">What about that all-important wash?</h2>
-    <div class="answers__and__buttons">
-        <div class="checkbox__wrapper">
-            <label class="container">
-                <span>Pass the bleach</span>
-                <input type="radio" id="bleach" name="question5" value="bleach">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">
-                <span>True blue</span>
-                <input type="radio" id="true__blue" name="question5" value="true__blue">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">
-            <span>Dark as it gets</span>
-                <input type="radio" id="dark__as" name="question5" value="dark__as">
-                <span class="checkmark"></span>
-            </label>
-        </div>
-        <div class="next__prev">
-            <p class="error__message">You need to select an answer to continue</p>
-            <button class="prev__button five">&#8592;</button><button class="next__button five" id="button__five">Next</button>
-        </div>
-    </div>
-</div>
-
-
-<div class="question six">
-        <h2 class="question__title">Now if you don’t mind us asking – how’s it looking back there?</h2>
-    <div class="answers__and__buttons">
-        <div class="checkbox__wrapper">
-            <label class="container">
-            <span>Serious Peach emoji</span>
-                <input type="radio" id="serious__peach" name="question6" value="serious__peach">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">
-            <span>No complaints</span>
-                <input type="radio" id="no__complaints" name="question6" value="no__complaints">
-                <span class="checkmark"></span>
-            </label>
-            <label class="container">
-            <span> Give me a lift</span>
-                <input type="radio" id="a__lift" name="question6" value="a__lift">
-                <span class="checkmark"></span>
-            </label>
-         </div>
-         <div class="next__prev">
-            <p class="error__message">You need to select an answer to continue</p>
-            <button class="prev__button six">&#8592;</button><button class="next__button" id="show__results">Result</button>
-        </div>
-    </div>
-</div>
-</div>
-
-
-<!-- show finalresult  -->
-<div id="finalresult">
-    <div class="finalresult__image"></div>
-    <div class="recommendation">
-        <h2 id="finalresult__title"><span></span></h2>
-        <p id="finalresult__text"><span></span></p>
-        <a href="" id="finalresult__rec"><button><span>Shop Recommendation</span></button></a>
-        <br>
-        <a href="" id="finalresult__cat"><button><span></span></button></a>
-    </div>
-</div>
-
-
-<!-- these images will load after DOM is ready in Javascript -->
-    <div class="hidden__image"><div class="res__one"></div></div>
-    <div class="hidden__image"><div class="res__two"></div></div>
-    <div class="hidden__image"><div class="res__three"></div></div>
-    <div class="hidden__image"><div class="res__four"></div></div>
-    <div class="hidden__image"><div class="res__five"></div></div>
-    <div class="hidden__image"><div class="res__six"></div></div> 
-    <div class="hidden__image"><div class="res__seven"></div></div> 
-    <div class="hidden__image"><div class="res__eight"></div></div>
-    <div class="hidden__image"><div class="res__nine"></div></div>
-    <div class="hidden__image"><div class="res__ten"></div></div>
-    <div class="hidden__image"><div class="res__eleven"></div></div>
-    <div class="hidden__image"><div class="res__twelve"></div></div>
-    <div class="hidden__image"><div class="res__thirteen"></div></div>
-    <div class="hidden__image"><div class="res__fourteen"></div></div>
-    <div class="hidden__image"><div class="res__fifteen"></div></div>
-
-
-</div>
    
  
 </body>

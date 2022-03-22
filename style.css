@@ -1,14 +1,14 @@
 /* Box sizing rules */
- 
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
- 
+
 
 /* Remove default margin */
- 
+
 body,
 h1,
 h2,
@@ -19,388 +19,515 @@ figure,
 blockquote,
 dl,
 dd {
-  margin: 0;
+	margin: 0;
 }
- 
+
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
- 
+
 ul[role='list'],
 ol[role='list'] {
-  list-style: none;
+	list-style: none;
 }
- 
+
 
 /* Set core root defaults */
- 
+
 html:focus-within {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
- 
+
 
 /* Set core body defaults */
- 
+
 body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
 }
- 
+
 
 /* A elements that don't have a class get default styles */
- 
+
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+	text-decoration-skip-ink: auto;
 }
- 
+
 
 /* Make images easier to work with */
- 
+
 img,
 picture {
-  max-width: 100%;
-  display: block;
+	max-width: 100%;
+	display: block;
 }
 
-
-
-input[type="radio"], input[type="checkbox"] {
-  display: block;
+input[type="radio"],
+input[type="checkbox"] {
+	display: block;
 }
 
 div#quiz-app {
-  height: 100%;
-  width: 100%;
-  position: fixed;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	z-index: 99999;
+	top: 0;
+	left: 0;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+.hide__quiz {
+	display: none;
 }
 
 .cross {
-  position: fixed;
-  top: 10px;
-  right: 20px;
-  width: 27px;
-  height: 32px;
-  z-index: 2;
-  cursor: pointer;
-}
-.cross__one {
-  height: 35px;
-  width: 2px;
-  margin-left: 12px;
-  background-color: #252525;
-  transform: rotate(45deg);
-  z-index: 1;
-}
-.cross__two {
-  height: 35px;
-  width: 2px;
-  background-color: #252525;
-  transform: rotate(90deg);
-  z-index: 2;
+	position: fixed;
+	top: 10px;
+	right: 20px;
+	width: 27px;
+	height: 32px;
+	z-index: 2;
+	cursor: pointer;
 }
 
+.cross__one {
+	height: 35px;
+	width: 2px;
+	margin-left: 12px;
+	background-color: #252525;
+	transform: rotate(45deg);
+	z-index: 1;
+}
+
+.cross__two {
+	height: 35px;
+	width: 2px;
+	background-color: #252525;
+	transform: rotate(90deg);
+	z-index: 2;
+}
 
 .error__message {
-  color: #D65449;
-  visibility: hidden; 
-  padding-bottom: 1rem;
+	color: #D65449;
+	visibility: hidden;
+	padding: 1rem 0;
 }
+
 .question__title {
-  max-width: 400px;
+	max-width: 400px;
+	font-weight: 600;
+	line-height: normal;
+	font-size: 1.5rem;
+	color: #E29A2D;
 }
+
 .question {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    padding: 3rem 0 3rem 1.5rem;
-    background-color: #f7f3ED;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 100%;
-    transition: 0.4s left;
+	height: 100%;
+	padding: 0 0 3vh 1.5rem;
+	background-color: #f7f3ED;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	justify-content: center;
+	overflow-y: scroll;
+	top: 0;
+	left: 0;
+	transform: translate(100%, 0);
+	width: 100%;
+	transition: 0.3s transform;
 }
-/* .question:nth-child(even) {
-  background-color: #256238;
-} */
-/* temporarily remove left 100% */
-.question__image {
-    width: 115px;
-    height: 140px;
-    margin: 0;
-    padding: 0;
-    background-color: #C4C4C4;
-    border-radius: 8px;
+
+.question__image img {
+	border: 4px solid transparent;
+	border-radius: 15px;
+}
+
+label.container span {
+	white-space: pre-line;
 }
 
 .question.one {
-  display: flex;
-  left:0;
-}
-/* hide images for question one */
-.question.one .question__image{
-  display: none;
+	transform: translate(0, 0);
 }
 
-.question.two .container {
-  padding-left: 0;
-  margin: 0;
-  margin-right: 16px;
+.new__line {
+	display: block;
 }
 
-/* hide checkboxes for question two */
-.question.two .checkmark {  
-  display: none;
-}
-/* wrap images for question 2 */
-.question.two .checkbox__wrapper {
-  display: flex;
-  flex-wrap: wrap;
+.checkmark {
+	display: none;
 }
 
+.checkbox__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	width: 400px;
+	padding-top: 3rem;
+}
 
 .next__prev button {
-    border-radius: 8px;
-    background-color: #ffffff;
-    border: 0.5px solid #EEEEEE;
-    padding: 10px 15px;
-    font-size: 16px;
+	border-radius: 8px;
+	background-color: #ffffff;
+	border: 0.5px solid #EEEEEE;
+	padding: 10px 15px;
+	font-size: 16px;
 }
-.next__prev {
-    padding-top: 3rem;
-}
+
 button.prev__button {
-    margin-right: 3rem;
+	margin-right: 3rem;
 }
 
 #result {
-  padding-top: 20%;
-  background-size: cover;
+	padding-top: 20%;
+	background-size: cover;
 }
 
-
-
 input[type='radio']+label:not(.label-like):before {
-  display: none;
+	display: none;
 }
 
 #finalresult {
-  width: 100%;
-  display: none;
-  position: absolute;
-  visibility: hidden;
-  top: 0;
-  left: 0;
-  height: 100%;
-  position: fixed;
-}
-.finalresult__image {
-  width: 50%;
-  background-size: cover;
-  height: 100%;
-  background-position: center;
+	width: 100%;
+	display: none;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	height: 100%;
+	position: fixed;
+	z-index: 1;
 }
 
-
-
-/* 1st outcome image { */
-  .hidden__image {
-    display: none;
-    visibility: hidden;
+#finalresult__image {
+	width: 50%;
+	background-size: cover;
+	height: 100%;
+	background-position: center;
 }
-  .res__one{
-      background-image: url("https://images.riverisland.com/is/image/RiverIsland/780815_main?cc&$retina$");
-  }
-  /* 2nd outcome image { */
-   .res__two {
-      background-image: url("https://images.riverisland.com/is/image/RiverIsland/792382_main?cc&$retina$");
-    }
-    /* 3rd outcome image { */
-  .res__three {
-      background-image: url("https://images.riverisland.com/is/image/RiverIsland/781561_main?cc&$retina$");
-  }
-  /* 4th outcome image { */
-    .res__four {
-      background-image: url("https://images.riverisland.com/is/image/RiverIsland/781986_main?cc&$retina$");
-    }
-     /* 5th outcome image { */
-      .res__five {
-        background-image: url("https://images.riverisland.com/is/image/RiverIsland/779666_main?cc&$retina$");
-      }
-       /* 6th outcome image { */
-    .res__six {
-      background-image: url("https://images.riverisland.com/is/image/RiverIsland/780697_main?cc&$retina$");
-    }
-     /* 7th outcome image { */
-      .res__seven {
-        background-image: url("https://images.riverisland.com/is/image/RiverIsland/786616_main?cc&$retina$");
-      }
-       /* 8th outcome image { */
-    .res__eight {
-      background-image: url("https://images.riverisland.com/is/image/RiverIsland/786616_main?cc&$retina$");
-    }
-    /* 9th outcome image { */
-      .res__nine {
-        background-image: url("https://images.riverisland.com/is/image/RiverIsland/780496_main?cc&$retina$");
-      }
-    /* 10th outcome image { */
-    .res__ten {
-      background-image: url("https://images.riverisland.com/is/image/RiverIsland/779451_main?cc&$retina$");
-    }
-      /* 11th outcome image { */
-       .res__eleven {
-         background-image: url("https://images.riverisland.com/is/image/RiverIsland/783428_main?cc&$retina$");
-       }
-       /* 12th outcome image { */
-    .res__twelve {
-      background-image: url("https://images.riverisland.com/is/image/RiverIsland/782863_main?cc&$retina$");
-    }
-     /* 13th outcome image { */
-      .res__thirteen {
-        background-image: url("https://images.riverisland.com/is/image/RiverIsland/781560_rollover?cc&$retina$");
-      }
-     /* 14th outcome image { */
-    .res__fourteen {
-      background-image: url("https://images.riverisland.com/is/image/RiverIsland/781504_main?cc&$retina$");
-    }
-     /* 15th outcome image { */
-      .res__fifteen{
-        background-image: url("https://images.riverisland.com/is/image/RiverIsland/787423_main?cc&$retina$");
-      }
+
+h2#finalresult__title span {
+	top: 4%;
+	color: #000000;
+	max-width: 400px;
+	font-weight: 600;
+	line-height: normal;
+	font-size: 1.9rem;
+}
+
+.hidden__image {
+	display: none;
+	visibility: hidden;
+}
 
 
+/* slim navy { */
+
+.slim__navy {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/navy-slim-fit-twill-suit-jacket_388531_rollover?$retina$");
+}
+
+
+/* slim black { */
+
+.slim__black {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/black-slim-fit-twill-suit-trousers_395793_rollover?$retina$");
+}
+
+
+/* slim grey { */
+
+.slim__grey {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/grey-slim-fit-check-suit-jacket_389620_rollover?$retina$");
+}
+
+
+/* slim beige { */
+
+.slim__beige {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/grey-slim-fit-twill-trousers_389375_rollover?$retina$");
+}
+
+
+/* slim blue { */
+
+.slim__blue {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/big--tall-blue-slim-fit-twill-suit-jacket_389415_rollover?$retina$");
+}
+
+
+/* slim brown { */
+
+.slim__brown {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/brown-slim-fit-twill-suit-jacket_389359_rollover?$retina$");
+}
+
+
+/* slim green { */
+
+.slim__green {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/green-slim-it-suit-jacket_389019_rollover?$retina$");
+}
+
+
+/* skinny navy { */
+
+.skinny__navy {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/navy-skinny-fit-twill-suit-trousers_396631_rollover?$retina$");
+}
+
+
+/* skinny black { */
+
+.skinny__black {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/black-skinny-fit-twill-suit-trousers_390076_rollover?$retina$");
+}
+
+
+/* skinny grey { */
+
+.skinny__grey {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/grey-skinny-fit-twill-suit-jacket_390426_rollover?$retina$");
+}
+
+
+/* skinny blue { */
+
+.skinny__blue {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/blue-skinny-fit-suit-trousers_389356_rollover?$retina$");
+}
+
+
+/* skinny brown { */
+
+.skinny__brown {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/brown-skinny-fit-leopard-print-suit-trousers_391609_rollover?$retina$");
+}
+
+
+/* skinny beige(currently don't have so use slim beige image ) { */
+
+.skinny__beige {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/grey-slim-fit-twill-trousers_389375_rollover?$retina$");
+}
+
+
+/* skinny green(currently don't have so use slim green image ) { */
+
+.skinny__green {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/green-slim-it-suit-jacket_389019_rollover?$retina$");
+}
+
+
+/* big & tall navy { */
+
+.big__tall__navy {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/big--tall-navy-check-skinny-suit-trousers_395808_main?$retina$");
+}
+
+
+/* big & tall black { */
+
+.big__tall__black {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/big--tall-black-slim-tuxedo-suit-trousers_389418_main?$retina$");
+}
+
+
+/* big & tall grey { */
+
+.big__tall__grey {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/big-and-tall-grey-slim-fit-check-suit-trouser_391676_rollover?$retina$");
+}
+
+
+/* big & tall blue { */
+
+.big__tall__blue {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/big--tall-blue-slim-fit-twill-suit-trousers_389354_main?$retina$");
+}
+
+
+/* big & tall beige (currently don't have so use slim beige image )*/
+
+.big__tall__beige {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/grey-slim-fit-twill-trousers_389375_rollover?$retina$");
+}
+
+
+/* big & tall brown (currently don't have so use slim brown image )*/
+
+.big__tall__brown {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/brown-slim-fit-twill-suit-jacket_389359_rollover?$retina$");
+}
+
+
+/* big & tall green (currently don't have so use slim green image )*/
+
+.big__tall__green {
+	background-image: url("https://images.riverisland.com/is/image/RiverIsland/green-slim-it-suit-jacket_389019_rollover?$retina$");
+}
 
 .recommendation {
-  width: 50%;
-  height: 100%;
-  padding: 2.5rem 0 0 1.5rem;
-  background-color: #f7f3ED;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	background-color: #f7f3ED;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
+
 .recommendation button {
-  padding: 0.7rem 0.7rem;
-  white-space: pre;
-  border-radius: 8px;
-  border: none;
-  font-weight: 600;
-  background-color: #ffffff;
+	padding: 0.7rem 0.7rem;
+	white-space: pre;
+	border-radius: 8px;
+	border: none;
+	font-weight: 600;
+	background-color: #ffffff;
 }
+
 p#finalresult__text {
-  padding: 2rem 0 1rem 0;
-  width: 350px;
-}
-#finalresult__rec button {
-  margin-bottom: 10px;
+	padding: 1rem 0 1rem 0;
+	width: 350px;
 }
 
 
-/* The container */
+/* Image containers */
+
 .container {
-  display: block;
-  position: relative;
-  padding: 9px 0 8px 45px;
-  cursor: pointer;
-  font-size: 16px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+	display: block;
+	position: relative;
+	padding-right: 25px;
+	cursor: pointer;
+	font-size: 16px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
-label.container:nth-child(2) {
-  margin: 0.7rem 0;
+label.container:nth-child(3),
+label.container:nth-child(4) {
+	padding-top: 20px;
 }
- 
+
+
 /* Hide the browser's default checkbox */
+
 .container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
 }
- 
+
+
 /* Create a custom checkbox */
+
 .checkmark {
-    position: absolute;
-    top: 5px;
-    left: 0;
-    border-radius: 8px;
-    border: 1px solid black;
-    height: 30px;
-    width: 30px;
-    background-color: transparent;
+	position: absolute;
+	top: 5px;
+	left: 0;
+	border-radius: 8px;
+	border: 1px solid black;
+	height: 30px;
+	width: 30px;
+	background-color: transparent;
 }
- 
+
+
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
+
+.container:hover input~.checkmark {
+	background-color: #ccc;
 }
- 
+
+
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: #000000;
+
+.container input:checked~.checkmark {
+	background-color: #000000;
 }
- 
+
+
 /* Create the checkmark/indicator (hidden when not checked) */
+
 .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
+	content: "";
+	position: absolute;
+	display: none;
 }
- 
+
+
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
+
+.container input:checked~.checkmark:after {
+	display: block;
 }
- 
+
+
 /* Style the checkmark/indicator */
+
 .container .checkmark:after {
-  left: 10px;
-  top: 5px;
-  width: 9px;
-  height: 16px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+	left: 10px;
+	top: 5px;
+	width: 9px;
+	height: 16px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
 }
- 
+
 @media (max-width: 767px) {
-  .container:last-child .question__image, .container:nth-last-child(2) .question__image {
-    background-image: linear-gradient(#C4C4C4, #C4C4C4, #f7f3ED);
-  }
-  .question {
-    padding: 15% 5%;
-  }
-  .question__image {
-    width: 150px;
-    height: 180px;
-  }
-  .question.two .checkbox__wrapper {
-    justify-content: space-between;
-  }
-  .question.two .container {
-    margin: 0;
-  }
-  #finalresult {
-   flex-direction: column;
-  }
-  .finalresult__image {
-    padding-top: 100%;
-    background-position: center;
-    width: 100%;
-  }
-  .recommendation {
-    width: 100%;
-  }
-h2#finalresult__title {
-  position: absolute;
-  top: 4%;
-  color: #ffffff;
-  }
-  .new__line {
-    display: block;
-  }
+	.question {
+		padding: 5% 9%;
+		position: fixed;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		justify-content: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.error__message {
+		padding: 1rem 0;
+	}
+	.question.two .checkbox__wrapper {
+		justify-content: space-between;
+	}
+	.question.two .container {
+		margin: 0;
+	}
+	#finalresult {
+		flex-direction: column;
+	}
+	#finalresult__image {
+		padding-top: 100%;
+		background-position: center;
+		width: 100%;
+	}
+	.recommendation {
+		width: 100%;
+		padding: 1.5rem 3rem;
+	}
+	.next__prev {
+		padding-top: 0;
+	}
+	.question__title {
+		padding-top: 1rem;
+	}
+	p#finalresult__text {
+		width: auto;
+	}
+	.checkbox__wrapper {
+		width: 100%;
+		justify-content: space-between;
+		padding-top: 10%;
+	}
+	.container {
+		padding-right: 0;
+	}
 }
